@@ -49,8 +49,8 @@ if start == "yes":
 
     translator = Translator()
     translated = translator.translate(text, dest='ru')
-    print(f'Было загаданно слово {word}, вы сказали', translated.text, '.')
-    if word == translated.text:
+    print(f'Было загаданно слово "{word}", вы сказали "{translated.text.lower()}".')
+    if word == translated.text.lower():
         print('Поздравляю, вы знаете это слово😊')
     else:
         print('Вы не смогли сказать это слово🙁')
